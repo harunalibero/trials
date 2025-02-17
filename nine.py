@@ -18,11 +18,10 @@ while True:
         name = input("What is your name: ")
         age = int(input("What is your age: "))
         print("SELECT A CLUB TO JOIN IN !")
-        print("1.Volleyball \n 2.Physics \n 3.Spelling \n 4.Boxing")
+        print("1.Volleyball \n2.Physics \n3.Spelling \n4.Boxing")
         club = int(input("Which club would you love to join (select with the number code):"))
         if club == 1 :
-            if spikers > 0 :
-                spikers = spikers - 1        
+            if spikers > 0 :        
                 print("WELCOME TO THE VOLLEYBALL CLUB 🎈")
                 if age < 10:
                     print("👶your still young to become a libero👶🏿young to join the volleyball club.")
@@ -31,6 +30,7 @@ while True:
                     equipment1 = input("Do you have all the necessary equipment for volleyball yes ,(Y) or no (N); ")
                     if equipment1 =="Y":
                         print(f"Now {name}, you may join the volleyball club because you have the right age and you have all the equipment.")
+                        spikers = spikers - 1
                         print(f"This club only has {spikers}slots remaining. ")
                     else:
                         print("You do not have the equipment to participate in this activity") 
@@ -40,8 +40,7 @@ while True:
                 print(f"The Spelling Club has {spellers} places remaining.")
                 print(f"The Boxing Club has {boxers} places remaining.")
         if club == 2:
-            if physicists > 0 :
-                physicists= physicists - 1        
+            if physicists > 0 :     
                 print("WELCOME TO THE PHYSICS CLUB 🌠☀")
                 if age < 13:
                     print("👶👶🏿 You still young to join the physics club things will be too hard.")
@@ -50,6 +49,7 @@ while True:
                     parental1 = input("Did your parents allow you to participate in theoretical physics yes(Y) or no (N):")
                     if parental1 =="Y":
                         print(f"Now {name}, you may join the Physics club because you have the right age and your parents allowed you.")
+                        physicists = physicists - 1
                         print(f"This club only has {physicists} slots remaining. ")
                     else:
                         print("Your parents didn't allow you, go bavk and ask for permission before physics makes your head pain. ") 
@@ -60,12 +60,12 @@ while True:
                 print(f"The Boxing Club has {boxers} places remaining.")
         if club == 3:
             if spellers> 0 :
-                spellers= spellers - 1        
                 print("WELCOME TO THE SPELLER'S CLUB 👨‍👨‍👧‍👧")
                 if age < 6:
                     print("👶👶🏿 You still young too even spell first grow.")
                 elif age >= 13:
                     print("You have now joined the club.")
+                    spellers = spellers - 1
                     print(f"This club only has {spellers} slots remaining. ") 
             elif spellers <=0:
                 print("The club is full please try another club.")
@@ -84,6 +84,7 @@ while True:
                     equipment2 = input("Do you have all the necessary equipment for boxing yes ,(Y) or no (N); ")
                     if equipment2 =="Y" and parental2 == "Y":
                         print(f"Now {name}, you may join the boxer's club because you have all the equipment and yoyur parents allowed you tp get hit in the face.")
+                        boxers = boxers - 1
                         print(f"This club only has {boxers}slots remaining. ")
                     elif equipment2 == "N":
                         print("You dont have the boxing cloves")
